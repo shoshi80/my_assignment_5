@@ -73,7 +73,7 @@ function toggleActive(activeButtonId, inactiveButtonId) {
 function openModalNoa() {
     document.getElementById('myModal').classList.remove('hidden');
 
-    document.getElementById('donation-modal-noa').innerText = `Amount donated: $${donationIdGettingFunction("noadon")} , Total fund raised $${mainBalanceGettingFunction("card1-balance")}`
+    document.getElementById('donation-modal-noa').innerText = `Amount donated: ${donationIdGettingFunction("noadon")} BDT, Total fund raised ${mainBalanceGettingFunction("card1-balance")} BDT`
     
 
 }
@@ -82,7 +82,7 @@ function openModalNoa() {
 function openModalFeni() {
     document.getElementById('myModal').classList.remove('hidden');
 
-    document.getElementById('donation-modal-noa').innerText = `Amount donated: $${donationIdGettingFunction("fenidon") } , Total fund raised $${mainBalanceGettingFunction("card2-balance")}`
+    document.getElementById('donation-modal-noa').innerText = `Amount donated: ${donationIdGettingFunction("fenidon") }BDT , Total fund raised ${mainBalanceGettingFunction("card2-balance")} BDT`
     
 
 }
@@ -90,7 +90,7 @@ function openModalFeni() {
 function openModalQuota() {
     document.getElementById('myModal').classList.remove('hidden');
 
-    document.getElementById('donation-modal-noa').innerText = `Amount donated: $${donationIdGettingFunction("quotadon")}, Total fund raised $${mainBalanceGettingFunction("card3-balance")}`
+    document.getElementById('donation-modal-noa').innerText = `Amount donated: ${donationIdGettingFunction("quotadon")} BDT, Total fund raised ${mainBalanceGettingFunction("card3-balance")} BDT`
     
 
 }
