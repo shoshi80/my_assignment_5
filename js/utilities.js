@@ -107,15 +107,18 @@ function appendFunction(num, newBalance){
 
     const div = document.createElement('div');
     div.classList.add('border-dashed');
+    const timestamp = new Date().toLocaleString(); // Formats the date and time
+
     div.innerHTML = `
 <div class="border border-dashed h-auto w-8/12 text-start mt-10 mb-6 mx-auto p-4"> 
 <h1 class="text-lg"> Money Donated ${num} BDT </h1>
 <p> Your new balance is ${newBalance} BDT </p>
+<p class="text-sm text-gray-500">Timestamp: ${timestamp}</p> 
 </div>
 
 
 
 `
-    const child= document.getElementById('transaction-section').appendChild(div);
+    const child= document.getElementById('transaction-section').prepend(div);
     return child;
 }

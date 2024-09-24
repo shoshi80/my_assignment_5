@@ -28,20 +28,7 @@ document.getElementById("noabut")
 
             openModalNoa();
 
-            const div = document.createElement('div');
-        div.classList.add('border-dashed');
-        div.innerHTML = `
-    <div class="border border-dashed h-auto w-8/12 text-start mt-10 mb-6 mx-auto p-4"> 
-    <h1 class="text-lg"> Money Donated ${num} BDT </h1>
-    <p> Your new balance is ${newBalance} BDT </p>
-    </div>
-
-    
-    
-    `
-        document.getElementById('transaction-section').appendChild(div);
-
-
+            appendFunction(num, newBalance);
 
 
         }
