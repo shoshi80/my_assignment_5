@@ -103,7 +103,7 @@ function closeModal() {
 
 
 
-function appendFunction(num, newBalance){
+function appendFunction(num, newBalance , donationPlace){
 
     const div = document.createElement('div');
     div.classList.add('border-dashed');
@@ -111,7 +111,7 @@ function appendFunction(num, newBalance){
 
     div.innerHTML = `
 <div class="border border-dashed h-auto w-8/12 text-start mt-10 mb-6 mx-auto p-4"> 
-<h1 class="text-lg"> Money Donated ${num} BDT </h1>
+<h1 class="text-lg font-extrabold"> Money Donated ${num} BDT for ${donationPlace} </h1>
 <p> Your new balance is ${newBalance} BDT </p>
 <p class="text-sm text-gray-500">Timestamp: ${timestamp}</p> 
 </div>

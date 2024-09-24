@@ -4,6 +4,8 @@ document.getElementById("noabut")
         const num = donationIdGettingFunction("noadon");
         const mainBalance = mainBalanceGettingFunction("main-balance");
         const donatedBalance = mainBalanceGettingFunction("card1-balance");
+        const donationPlace= "Flood relief at Noakhali, Bangladesh";
+        
 
         console.log(`num: ${num}, mainBalance: ${mainBalance}`);
 
@@ -28,7 +30,7 @@ document.getElementById("noabut")
 
             openModalNoa();
 
-            appendFunction(num, newBalance);
+            appendFunction(num, newBalance,donationPlace);
 
 
         }
@@ -49,6 +51,7 @@ document.getElementById("fenibut")
         const num = donationIdGettingFunction("fenidon")
         const mainBalance = mainBalanceGettingFunction("main-balance");
         const donatedBalance = mainBalanceGettingFunction("card2-balance");
+        const donationPlace= "Flood relief at Feni, Bangladesh";
         if (num > mainBalance) {
             alert("You do not have sufficient balance");
             return;
@@ -71,7 +74,7 @@ document.getElementById("fenibut")
 
             openModalFeni();
 
-            appendFunction(num, newBalance);
+            appendFunction(num, newBalance,donationPlace);
         }
 
 
@@ -83,6 +86,7 @@ document.getElementById("quotabut")
         const num = donationIdGettingFunction("quotadon")
         const mainBalance = mainBalanceGettingFunction("main-balance");
         const donatedBalance = mainBalanceGettingFunction("card3-balance");
+        const donationPlace= "Aid for injured in the Quota movement, Bangladesh";
         if (num > mainBalance) {
             alert("You do not have sufficient balance");
             return;
@@ -102,7 +106,7 @@ document.getElementById("quotabut")
             document.getElementById("card3-balance").innerHTML = newDonatedBalance;
              openModalQuota();
 
-             appendFunction(num, newBalance);
+             appendFunction(num, newBalance,donationPlace);
         }
 
 
