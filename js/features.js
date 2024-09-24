@@ -9,19 +9,27 @@ document.getElementById("noabut")
             alert("You do not have sufficient balance");
             return;
         }
-        if (isNaN(num) || num < 0) {
+        if (isNaN(num) || num < 0||num=="") {
             alert("Invalid Input");
             return;
         }
+        else{
+            const newBalance = mainBalanceUpdate(mainBalance, num);
+            const newDonatedBalance = donatedBalanceUpdate(donatedBalance, num);
+    
+    
+    
+            document.getElementById("main-balance").innerHTML = newBalance;
+            document.getElementById("card1-balance").innerHTML = newDonatedBalance;
+
+            this.onclick=openModalNoa();
+            
+        }
 
 
-        const newBalance = mainBalanceUpdate(mainBalance, num);
-        const newDonatedBalance = donatedBalanceUpdate(donatedBalance, num);
+       
 
-
-
-        document.getElementById("main-balance").innerHTML = newBalance;
-        document.getElementById("card1-balance").innerHTML = newDonatedBalance;
+        
 
     })
 
@@ -37,18 +45,23 @@ document.getElementById("fenibut")
             return;
         }
 
-        if (isNaN(num)|| num < 0) {
+        if (isNaN(num)|| num < 0 ||num=="") {
             alert("Invalid Input");
             return;
         }
 
-        const newBalance = mainBalanceUpdate(mainBalance, num);
-        const newDonatedBalance = donatedBalanceUpdate(donatedBalance, num);
+        else{
+            const newBalance = mainBalanceUpdate(mainBalance, num);
+            const newDonatedBalance = donatedBalanceUpdate(donatedBalance, num);
+    
+    
+    
+            document.getElementById("main-balance").innerHTML = newBalance;
+            document.getElementById("card2-balance").innerHTML = newDonatedBalance;
+            this.onclick=openModalFeni();
+        }
 
-
-
-        document.getElementById("main-balance").innerHTML = newBalance;
-        document.getElementById("card2-balance").innerHTML = newDonatedBalance;
+      
     })
 
 document.getElementById("quotabut")
@@ -61,17 +74,37 @@ document.getElementById("quotabut")
             alert("You do not have sufficient balance");
             return;
         }
-        if (isNaN(num)|| num < 0) {
+        if (isNaN(num)|| num < 0 ||num=="") {
             alert("Invalid Input");
             return;
         }
 
-        const newBalance = mainBalanceUpdate(mainBalance, num);
+        else{
+            const newBalance = mainBalanceUpdate(mainBalance, num);
         const newDonatedBalance = donatedBalanceUpdate(donatedBalance, num);
 
 
 
         document.getElementById("main-balance").innerHTML = newBalance;
         document.getElementById("card3-balance").innerHTML = newDonatedBalance;
+            this.onclick=openModalQuota();
+        }
+
+        
+
+    })
+
+
+    document.getElementById("donation-btn")
+    .addEventListener("click", function(){
+
+        showSectionById("cards-section");
+
+    })
+
+    document.getElementById("history-btn")
+    .addEventListener("click", function(){
+
+        showSectionById("transaction-section");
 
     })
